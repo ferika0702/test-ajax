@@ -132,11 +132,11 @@
                 </div>
                 <div class="form-group">
                   <label>Nim</label><span id="error_name" class="text-danger"></span>
-                  <input type="text" pattern="[0-9]{16}" title="Masukan 10 Angka Dan Sesuai Format" name="nim" class="form-control nim" placeholder="nim" required>
+                  <input type="number"  title="Masukan 10 Angka Dan Sesuai Format" name="nim" class="form-control nim" placeholder="nim" required>
                 </div>
                 <div class="form-group">
                   <label>Nomer Telepon</label><span id="error_name" class="text-danger"></span>
-                  <input type="text" minlength="12" maxlength="13" title="Masukan 12 - 13 Angka Dan Sesuai Format" name="no_telepon" class="form-control no_telepon" placeholder="Nomer Yang Dapat Dihubungi" required>
+                  <input type="number" minlength="12" maxlength="13" title="Masukan 12 - 13 Angka Dan Sesuai Format" name="no_telepon" class="form-control no_telepon" placeholder="Nomer Yang Dapat Dihubungi" required>
                 </div>
                 <div class="form-group">
                   <label>Email</label><span id="error_name" class="text-danger"></span>
@@ -232,7 +232,6 @@
       </main>
     </div>
   </div>
-
   <script src="/js/script-delete.js"></script>
   <script src="/js/bootstrap.bundle.min.js"></script>
   <script src="/js/jquery-3.6.3.min.js"></script>
