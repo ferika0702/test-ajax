@@ -14,6 +14,7 @@
 <!-- JavaScript -->
 <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 
+
 <!-- CSS -->
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
 <!-- Default theme -->
@@ -56,11 +57,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
-  <div class="navbar-nav">
-    <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="#">Sign out</a>
-    </div>
-  </div>
+  
 </header>
 
 <div class="container-fluid">
@@ -96,12 +93,8 @@
           <div class="btn-group me-2">
           <button onclick="location.href='/mahasiswa'" type="button" class="btn btn-sm btn-outline-secondary">Mahasiswa</button>
 <!-- Tombol untuk pindah ke halaman dosen -->
-<button onclick="location.href='/dosen'" type="button" class="btn btn-sm btn-outline-secondary">Dosen</button>
+          <button onclick="location.href='/dosen'" type="button" class="btn btn-sm btn-outline-secondary">Dosen</button>
           </div>
-          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-            <span data-feather="calendar"></span>
-            This week
-          </button>
         </div>
       </div>
 

@@ -57,11 +57,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
-    <div class="navbar-nav">
-      <div class="nav-item text-nowrap">
-        <a class="nav-link px-3" href="#">Sign out</a>
-      </div>
-    </div>
+    
   </header>
 
   <div class="container-fluid">
@@ -101,10 +97,7 @@
 <button onclick="location.href='/dosen'" type="button" class="btn btn-sm btn-outline-secondary">Dosen</button>
 
             </div>
-            <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-              <span data-feather="calendar"></span>
-              This week
-            </button>
+
           </div>
         </div>
         <!-- conten -->
