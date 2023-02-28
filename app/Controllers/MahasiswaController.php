@@ -17,6 +17,21 @@ class MahasiswaController extends Controller
     public function store()
 {
     $mhs = new MahasiswaModel();
+
+    $rules = [
+        'nama_mhs' => 'required',
+        'tgl_lahir' => 'required|valid_date',
+        'nim' => 'required|numeric',
+        'no_telepon' => 'required|min_length[12]|max_length[13]',
+        'email' => 'required|valid_email'
+    ];
+    
+
+    if (!$this->validate($rules)) {
+        $errors = $this->validator->getErrors();
+        return $this->response->setJSON($errors);
+    }
+
     $data = [
         'nama_mhs' => $this->request->getPost('nama_mhs'),
         'tgl_lahir' => $this->request->getPost('tgl_lahir'),

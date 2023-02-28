@@ -136,7 +136,7 @@
                 </div>
                 <div class="form-group">
                   <label>Nomer Telepon</label><span id="error_name" class="text-danger"></span>
-                  <input type="number" title="Masukan 12-13 Angka" name="no_telepon" class="form-control no_telepon" placeholder="Nomer Yang Dapat Dihubungi" required>
+                  <input type="text" minlength="12" maxlength="13" title="Masukan 12 - 13 Angka Dan Sesuai Format" name="no_telepon" class="form-control no_telepon" placeholder="Nomer Yang Dapat Dihubungi" required>
                 </div>
                 <div class="form-group">
                   <label>Email</label><span id="error_name" class="text-danger"></span>
