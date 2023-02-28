@@ -50,10 +50,4 @@ class MahasiswaController extends Controller
         $model->delete($id);
         return redirect()->to(base_url() . 'mahasiswa');
     }
-    public function fetch()
-    {
-        $model = new MahasiswaModel();
-        $data['mahasiswa'] = $model->findAll();
-        return $this->response->setJSON($data)->setStatusCode(200);
-    }
 }

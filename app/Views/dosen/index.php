@@ -62,71 +62,19 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+              <a class="nav-link" href="/mahasiswa">
+                <span data-feather="file"></span>
+                Mahasiswa
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dosen">
               <span data-feather="file"></span>
-              Orders
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="shopping-cart"></span>
-              Products
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="users"></span>
-              Customers
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="bar-chart-2"></span>
-              Reports
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="layers"></span>
-              Integrations
-            </a>
-          </li>
-        </ul>
-
-        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-          <span>Saved reports</span>
-          <a class="link-secondary" href="#" aria-label="Add a new report">
-            <span data-feather="plus-circle"></span>
-          </a>
-        </h6>
-        <ul class="nav flex-column mb-2">
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Current month
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Last quarter
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Social engagement
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Year-end sale
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+                Dosen
+              </a>
+            </li>
+        </div>
+      </nav>
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -186,7 +134,8 @@
 <!-- End Tambah modal -->
 <!-- Edit Modal -->
 <?php $i = 1; ?>
-            <?php foreach ($dosen as $dsn) : ?>
+<?php foreach ($dosen as $dsn) : ?>
+<input type="hidden" name="id_dosen" value="<?= $dsn['id_dosen']; ?>" />
 <div class="modal fade" id="editModal<?= $dsn['id_dosen'];?>" tabindex="-1" aria-labelledby="edit-dosenModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -197,19 +146,19 @@
       <div class="modal-body">
       <div class="form-group">
     <label>Nama Dosen</label><span id="error_name" class="text-danger"></span>
-    <input type="text" name="nama_dosen" class="form-control nama_dosen" value="<?= $dsn['nama_dosen'];?>" placeholder="Nama Lengkap" required>
+    <input type="text" name="nama_dosen" class="form-control nama_dosen_edit" value="<?= $dsn['nama_dosen'];?>" placeholder="Nama Lengkap" required>
 </div>
 <div class="form-group">
     <label>Nip</label><span id="error_name" class="text-danger"></span>
-    <input type="text" pattern="[0-9]{16}" title="Masukan 10 Angka Dan Sesuai Format"  value="<?= $dsn['nip'];?>" name="nim" class="form-control nim" placeholder="nim" required>
+    <input type="text" pattern="[0-9]{16}" title="Masukan 10 Angka Dan Sesuai Format"  value="<?= $dsn['nip'];?>" name="nip" class="form-control nip_edit" placeholder="nip" required>
 </div>
 <div class="form-group">
     <label>Nomer Telepon</label><span id="error_name" class="text-danger"></span>
-    <input type="number" title="Masukan 12-13 Angka" name="no_telepon" value="<?= $dsn['no_telepon'];?>"  class="form-control no_telepon" placeholder="Nomer Yang Dapat Dihubungi" required>
+    <input type="number" title="Masukan 12-13 Angka" name="no_telepon" value="<?= $dsn['no_telepon'];?>"  class="form-control no_telepon_edit" placeholder="Nomer Yang Dapat Dihubungi" required>
 </div>
 <div class="form-group">
     <label>Email</label><span id="error_name" class="text-danger"></span>
-    <input type="text" name="email" class="form-control email" value="<?= $dsn['email'];?>" placeholder="Email" required>
+    <input type="text" name="email" class="form-control email_edit" value="<?= $dsn['email'];?>" placeholder="Email" required>
 </div>
       </div>
       <div class="modal-footer">
@@ -262,6 +211,7 @@
     <script src="/js/jquery-3.6.3.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/insert-data-dosen.js"></script>
+    <script src="/js/edit-data-dosen.js"></script>
 
     <script src="/js/bootstrap.bundle.min.js"></script>
 

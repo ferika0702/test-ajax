@@ -25,7 +25,6 @@ $(document).ready(function () {
           $("#dosenModal").find("input").val("");
           alertify.set("notifier", "position", "top-right");
           alertify.success(response.status);
-          // $(".mahasiswadata").html(response);
         },
       });
     }

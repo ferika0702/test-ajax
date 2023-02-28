@@ -32,8 +32,8 @@ class Mahasiswa extends Migration
                 'unique'     => true,
             ],
             'no_telepon'=>[
-                'type'      => 'INT',
-                'constraint'=> 12,
+                'type'      => 'VARCHAR',
+                'constraint'=> '100',
             ],
             'created_at datetime default current_timestamp',
             'updated_at datetime default current_timestamp on update current_timestamp',

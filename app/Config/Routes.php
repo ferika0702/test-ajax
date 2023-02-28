@@ -36,9 +36,10 @@ $routes->delete('/mahasiswa/delete/(:num)', 'MahasiswaController::delete/$1');
 $routes->delete('/dosen/delete/(:num)', 'DosenController::delete/$1');
 
 //ajax
-$routes->post('/dosen/store', 'DosenController::store');
 $routes->post('/mahasiswa/store', 'MahasiswaController::store');
 $routes->post('/mahasiswa/update/(:num)', 'MahasiswaController::update/$1');
+$routes->post('/dosen/store', 'DosenController::store');
+$routes->post('/dosen/update/(:num)', 'DosenController::update/$1');
 
 // $routes->get('/mahasiswa/getdata/(:num)', 'MahasiswaController::fetch');
 

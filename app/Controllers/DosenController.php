@@ -26,16 +26,19 @@ class DosenController extends BaseController
         return $this->response->setJSON($data);
         // return view('mahasiswa/index', $data);
     }
-    public function update($id){
-        $model = new DosenModel();
-        $data = [
-            'nama_dosen' => $this->request->getPost('nama_dosen'),
-            'nip' => $this->request->getPost('nip'),
-            'email' => $this->request->getPost('email'),
-            'no_telepon' => $this->request->getPost('no_telepon')
-        ];
-        $model->update($id, $data);
-    }
+    public function update($id = null)
+{
+    $model = new DosenModel();
+    $data = [     
+        'nama_dosen' => $this->request->getPost('nama_dosen'),
+        'nip' => $this->request->getPost('nip'),
+        'email' => $this->request->getPost('email'),
+        'no_telepon' => $this->request->getPost('no_telepon')
+    ];
+
+    $model->update($id, $data);
+    echo json_encode($model);
+}
     public function delete($id){
         $model = new DosenModel();
         $model->delete($id);
