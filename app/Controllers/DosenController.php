@@ -15,6 +15,17 @@ class DosenController extends BaseController
     }
     public function store(){
         $dsn = new DosenModel();
+        $rules = [
+            'nama_dosen' => 'required',
+            'nip' => 'required|numeric',
+            'no_telepon' => 'required|min_length[12]|max_length[13]',
+            'email' => 'required|valid_email'
+        ];
+
+        if (!$this->validate($rules)) {
+            $errors = $this->validator->getErrors();
+            return $this->response->setJSON($errors);
+        }
         $data = [
             'nama_dosen' => $this->request->getPost('nama_dosen'),
             'nip' => $this->request->getPost('nip'),
@@ -24,7 +35,6 @@ class DosenController extends BaseController
         $dsn->save($data);
         $data = ['status'=>'Data Berhasil Di input'];
         return $this->response->setJSON($data);
-        // return view('mahasiswa/index', $data);
     }
     public function update($id = null)
 {
